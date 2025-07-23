@@ -1,0 +1,15 @@
+body{
+    background:linear-gradient(rgba(88, 88, 244,0.5),rgb(255, 192, 203));
+}
+p{
+    color:rgb(0, 0, 0);
+}
+a{
+    text-decoration: none;
+}
+header{
+    text-align:center;
+}
+#center{
+    text-align:center; 
+}
