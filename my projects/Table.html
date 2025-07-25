@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-gray-800 text-white px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <h1 class="text-lg font-semibold">BOOK REVIEW</h1>
+        </div>
+        <span class="font-semibold">Dheeraj</span>
+    </header>
+    <div class="bg-red-500 text-white px-6 py-2 text-sm">
+        Home > login.html > book.html
+    </div>
+    <div class="bg-gray-200 p-6 text-center text-xl flex justify-between items-center mx-10 mt-6 rounded-md">
+        <span>Msg- Select book by click on isbn no or search to give review</span>
+        <div class="space-x-4">
+            <a href="#" class="text-blue-600 hover:underline text-sm">view review</a>
+            <button class="bg-blue-500 hover:bg-red-500 px-4 py-2 rounded">Logout</button>
+        </div>
+    </div>
+    <div class="flex justify-center items-center mt-6 space-x-2">
+        <label for="search" class="text-gray-700">Search book here:</label>
+        <input type="text" id="search" placeholder="Enter any one book title, aut" class="border rounded px-4 py-1 w-72">
+        <button class="bg-gray-200 hover:bg-gray-300 px-4 py-1 rounded border">search</button>
+    </div>
+    <div class="overflow-x-auto mt-6 mx-3">
+        <table class="table-auto border-collapse border border-black w-full text-sm">
+            <thead class="bg-white">
+                <tr>
+                    <th class="border border-black px-4 py-2 text-left">Isbn No</th>
+                    <th class="border border-black px-4 py-2 text-left">Title</th>
+                    <th class="border border-black px-4 py-2 text-left">Author</th>
+                    <th class="border border-black px-4 py-2 text-left">Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white">
+                    <td class="border border-black px-4 py-2 text-blue-600 underline cursor-pointer">0679772677</td>
+                    <td class="border border-black px-4 py-2">A Civil Action</td>
+                    <td class="border border-black px-4 py-2">Jonathan Harr</td>
+                    <td class="border border-black px-4 py-2">1995</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border border-black px-4 py-2 text-blue-600 underline cursor-pointer">031632468X</td>
+                    <td class="border border-black px-4 py-2">Frog Music</td>
+                    <td class="border border-black px-4 py-2">Emma Donoghue</td>
+                    <td class="border border-black px-4 py-2">2014</td>
+                </tr>
+                <tr>
+                    <td class="border border-black px-4 py-2 text-blue-600 underline cursor-pointer">1842322761</td>
+                    <td class="border border-black px-4 py-2">On the Beach</td>
+                    <td class="border border-black px-4 py-2">Nevil Shute</td>
+                    <td class="border border-black px-4 py-2">1957</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
