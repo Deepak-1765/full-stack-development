@@ -17,10 +17,10 @@ function Add() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    alert(`Added: ${formData.todoTitle}, ${formData.dueDate}, ${formData.todoStatus}`);
-    setFormData({ todoTitle: "", dueDate: "", todoStatus: "" }); 
-  }
-
+    alert("Added Task " + JSON.stringify(formData));
+    setFormData({ todoTitle: "", dueDate: "", todoStatus: "" }); // clear form
+  
+    }
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-6 text-center text-black">Add Todo</h2>
