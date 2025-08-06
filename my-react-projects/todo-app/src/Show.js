@@ -2,9 +2,17 @@ function Show(props) {
   let todoArr = props.todo;
 
   function handleClick(e, todoId) {
-    todoArr = todoArr.filter(todo => todo.id !== todoId);
-    props.setTodo(todoArr);
-    alert('To-Do task completed');
+    let newTodoArr =[]
+
+    for (let i = 0; i < todoArr.length; i++) {
+      newTodoArr[i] = { ...todoArr[i] };
+
+      if (todoArr[i].id === todoId) {
+        newTodoArr[i].todoStatus = "completed";
+        newTodoArr[i].completeDate = new Date();
+      }
+  }
+  props.setTodo(newTodoArr);
   }
 
   return (
@@ -16,6 +24,7 @@ function Show(props) {
           <tr className="bg-gray-200 text-left">
             <th className="px-6 py-3 border-b">Todo Title</th>
             <th className="px-6 py-3 border-b">Due Date</th>
+            <th className="px-6 py-3 border-b">Status</th>
             <th className="px-6 py-3 border-b text-center">Mark Done</th>
           </tr>
         </thead>
@@ -24,6 +33,7 @@ function Show(props) {
             <tr key={value.id} className="hover:bg-gray-100 transition-colors">
               <td className="px-6 py-4 border-b">{value.todoTitle}</td>
               <td className="px-6 py-4 border-b">{value.dueDate}</td>
+              <td className="px-6 py-4 border-b">{value.todoStatus}</td>
               <td className="px-6 py-4 border-b text-center">
                 <button
                   onClick={(e) => handleClick(e, value.id)}
