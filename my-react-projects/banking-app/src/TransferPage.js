@@ -1,13 +1,47 @@
-function TransferPage () {
-    return (
-        <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold mb-6 text-center text-black">Transfer Money Between Account</h2>
-      
-      <div>
+import { useState } from "react";
+
+function TransferPage() {
+  const [formData, setFormData] = useState({
+    fromAccount: "",
+    toAccount: "",
+    amount: ""
+  });
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert(
+      `From Account: ${formData.fromAccount}\n` +
+      `To Account: ${formData.toAccount}\n` +
+      `Amount: ₹${formData.amount}`
+    );
+
+    // Clear the form
+    setFormData({
+      fromAccount: "",
+      toAccount: "",
+      amount: ""
+    });
+  }
+
+  return (
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-semibold mb-6 text-center text-black">
+        Transfer Money Between Account
+      </h2>
+
+      <form onSubmit={handleSubmit}>
+        <div>
           <label className="font-medium mb-1 text-black">From Account</label>
           <input
             type="text"
-            name="todoTitle"
+            name="fromAccount"
+            value={formData.fromAccount}
+            onChange={handleChange}
             placeholder="Enter your account no"
             className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md"
             required
@@ -19,6 +53,8 @@ function TransferPage () {
           <input
             type="text"
             name="toAccount"
+            value={formData.toAccount}
+            onChange={handleChange}
             placeholder="Enter your receiver account no"
             className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md"
             required
@@ -30,6 +66,8 @@ function TransferPage () {
           <input
             name="amount"
             type="number"
+            value={formData.amount}
+            onChange={handleChange}
             placeholder="Enter amount you want to send"
             className="w-full px-4 py-2 border border-gray-300 text-gray-600 rounded-md"
             required
@@ -44,8 +82,9 @@ function TransferPage () {
         >
           Submit
         </button>
-        </div>
-    )
+      </form>
+    </div>
+  );
 }
 
-export { TransferPage }
+export { TransferPage };

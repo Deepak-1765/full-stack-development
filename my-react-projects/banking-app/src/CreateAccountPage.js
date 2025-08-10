@@ -28,9 +28,7 @@ function CreateAccountPage() {
       branch: "",
       password: ""
     });
-
-    // Navigate to BankDetailPage with data
-    navigate("/BankDetails", { state: { ...formData, balance: 65000 } });
+    navigate("/Login");
   }
 
   return (
