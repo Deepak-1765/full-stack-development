@@ -5,9 +5,8 @@ function LoginPage({ setIsLoggedIn }) {
 
   function handleLogin(e) {
     e.preventDefault();
-    // Logic for checking credentials can be added here
-    setIsLoggedIn(true); // Set login state
-    navigate('/BankDetail'); // Redirect to bank detail page or dashboard
+    setIsLoggedIn(true); 
+    navigate('/BankDetail'); 
   }
 
   return (

@@ -7,10 +7,10 @@ function BankDetailPage() {
   return (
     <div className=" mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-4 text-center text-black">
-        Your Account Details
+        Your Account Details 
       </h2>
 
-      <table className="table-auto w-full text-left text-gray-700 border border-gray-200">
+      <table className="table-auto w-full text-left text-gray-700 border border-gray-200"> 
         <tbody>
           <tr>
             <td className="border px-20 py-2 font-medium">Name</td>

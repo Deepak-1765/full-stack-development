@@ -4,8 +4,8 @@ function LogoutPage({ setIsLoggedIn }) {
   const navigate = useNavigate();
 
   function handleLogout() {
-    setIsLoggedIn(false); // Reset login status
-    navigate('/HomePage'); // Redirect to home
+    setIsLoggedIn(false); 
+    navigate('/HomePage'); 
   }
 
   return (
